@@ -10,14 +10,18 @@
             background-image: url('images/cyber_bg.jpg'); /* Set the background image */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the background */
-            color: #fff; /* White text */
+            color: #000; /* Black text */
             margin: 0;
             padding: 0;
+            display: flex; /* Using flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
             text-align: center; /* Centering text */
         }
         form {
             max-width: 400px;
-            margin: auto;
+            width: 100%; /* Ensure form is responsive */
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 10px;
@@ -57,11 +61,27 @@
             content: " *"; /* Adds a red asterisk for required fields */
             color: red; /* Red color for the asterisk */
         }
+        .note {
+            font-size: 12px; /* Note font size */
+            color: #000; /* Black text for note */
+            margin-top: -10px; /* Slightly decrease space before the note */
+            margin-bottom: 10px; /* Space after the note */
+        }
+        .phone-container {
+            display: flex; /* Flexbox for phone code and number */
+            align-items: center; /* Center align items vertically */
+            gap: 10px; /* Space between elements */
+        }
+        #phone-region {
+            width: 80px; /* Smaller width for phone region dropdown */
+        }
     </style>
 </head>
 <body>
 
     <form id="contact-form">
+        <div class="note">Fields marked with an asterisk are required.</div>
+
         <label for="title" class="required">Title:</label>
         <select id="title" required>
             <option value="" disabled selected>Select your title</option>
@@ -79,19 +99,19 @@
         <input type="email" id="email" required>
         <span id="email-error" class="error-message">Valid email is required</span>
 
-        <label for="phone-region" class="required">Phone Region:</label>
-        <select id="phone-region" required>
-            <option value="" disabled selected>Select your region</option>
-            <option value="+1">USA (+1)</option>
-            <option value="+44">UK (+44)</option>
-            <option value="+91">India (+91)</option>
-            <option value="+61">Australia (+61)</option>
-            <option value="+81">Japan (+81)</option>
-            <!-- Add more regions as needed -->
-        </select>
-
-        <label for="cell" class="required">Cell Number:</label>
-        <input type="text" id="cell" required>
+        <label for="phone" class="required">Phone:</label>
+        <div class="phone-container">
+            <select id="phone-region" required>
+                <option value="" disabled selected>Select</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+91">+91</option>
+                <option value="+61">+61</option>
+                <option value="+81">+81</option>
+                <!-- Add more regions as needed -->
+            </select>
+            <input type="text" id="cell" placeholder="Enter phone number" required>
+        </div>
         <span id="cell-error" class="error-message">Cell number is required</span>
 
         <label for="comments" class="required">Comments:</label>
