@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('cyber_bg.jpg'); /* Path to your background image */
-      background-size: cover; /* Cover the entire background */
-      background-position: center; /* Center the background */
-      margin: 0;
-      padding: 0;
-      color: #fff; /* White text color */
-    }
-    .form-container {
-      max-width: 400px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .error {
-      border-color: red;
-      background-color: #ffe6e6;
-    }
-    .valid {
-      border-color: green;
-    }
-    .error-message {
-      color: red;
-      font-size: 12px;
-      display: none;
-    }
-    button {
-      padding: 10px 15px;
-      border: none;
-      background-color: #28a745;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    .required:after {
-      content: " *";
-      color: red; /* Red color for asterisk */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/cyber_bg.jpg'); /* Set the background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centering text */
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            border-color: red;
+            background-color: #ffe6e6;
+        }
+        .valid {
+            border-color: green;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .required:after {
+            content: " *"; /* Adds a red asterisk for required fields */
+            color: red; /* Red color for the asterisk */
+        }
+    </style>
 </head>
 <body>
 
-  <div class="form-container">
     <form id="contact-form">
-      <label for="title">Title:</label>
-      <select id="title">
-        <option value="Mr">Mr</option>
-        <option value="Mrs">Mrs</option>
-        <option value="Miss">Miss</option>
-      </select>
+        <label for="name" class="required">Name:</label>
+        <input type="text" id="name" required>
+        <span id="name-error" class="error-message">Name is required</span>
 
-      <label for="first-name" class="required">First Name:</label>
-      <input type="text" id="first-name">
-      <span id="first-name-error" class="error-message">First name is required</span>
+        <label for="email" class="required">Email:</label>
+        <input type="email" id="email" required>
+        <span id="email-error" class="error-message">Valid email is required</span>
 
-      <label for="last-name" class="required">Last Name:</label>
-      <input type="text" id="last-name">
-      <span id="last-name-error" class="error-message">Last name is required</span>
+        <label for="phone-region" class="required">Phone Region:</label>
+        <select id="phone-region" required>
+            <option value="" disabled selected>Select your region</option>
+            <option value="+1">USA (+1)</option>
+            <option value="+44">UK (+44)</option>
+            <option value="+91">India (+91)</option>
+            <option value="+61">Australia (+61)</option>
+            <option value="+81">Japan (+81)</option>
+            <!-- Add more regions as needed -->
+        </select>
 
-      <label for="phone" class="required">Phone Number:</label>
-      <input type="text" id="phone">
-      <span id="phone-error" class="error-message">Phone number is required</span>
+        <label for="cell" class="required">Cell Number:</label>
+        <input type="text" id="cell" required>
+        <span id="cell-error" class="error-message">Cell number is required</span>
 
-      <label for="region">Region:</label>
-      <select id="region">
-        <option value="North America">North America</option>
-        <option value="Europe">Europe</option>
-        <option value="Asia">Asia</option>
-        <option value="Other">Other</option>
-      </select>
+        <label for="comments" class="required">Comments:</label>
+        <textarea id="comments" required></textarea>
+        <span id="comments-error" class="error-message">Comments are required</span>
 
-      <label for="email" class="required">Email:</label>
-      <input type="text" id="email">
-      <span id="email-error" class="error-message">Valid email is required</span>
-
-      <label for="comments" class="required">Notes:</label>
-      <textarea id="comments"></textarea>
-      <span id="comments-error" class="error-message">Notes are required</span>
-
-      <button type="submit">Submit</button>
+        <button type="submit">Submit</button>
     </form>
-  </div>
 
-  <script src="form.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>
