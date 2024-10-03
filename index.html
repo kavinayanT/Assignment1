@@ -17,20 +17,23 @@
             color: #ff0000; /* Red color for heading */
         }
         .navbar {
-            background-color: #8f1313; /* maroon background for navbar */
-            padding: 10px 0;
+            background-color: #8f1313; /* Maroon background for navbar */
+            padding: 5px; /* Adjusted padding to make it smaller */
             margin: 0;
             display: flex; /* Using flexbox for centering */
             justify-content: center; /* Centering menu items */
+            border-radius: 5px; /* Optional: rounded corners for navbar */
         }
         .navbar a {
-            color: #fff; /* white text for menu items */
+            color: #fff; /* White text for menu items */
             text-decoration: none;
-            padding: 15px 25px;
+            padding: 10px 15px; /* Adjusted padding for links */
             border-radius: 5px;
             margin: 0 10px;
-            background-color: #0059ff; /* blue box */
+            background-color: transparent; /* Make navbar links transparent */
             transition: background-color 0.3s; /* Smooth transition */
+            font-weight: bold; /* Bold text */
+            text-decoration: underline; /* Underlined text */
         }
         .navbar a:hover {
             background-color: #ff0404; /* Red background on hover */
@@ -39,6 +42,12 @@
             max-width: 800px;
             margin: auto;
             padding: 20px;
+            border: 2px solid #000; /* Black outline for container */
+            border-radius: 5px; /* Optional: rounded corners for the container */
+            transition: background-color 0.3s; /* Smooth transition for hover */
+        }
+        .container:hover {
+            background-color: #ff0404; /* Red background on hover */
         }
     </style>
 </head>
