@@ -1,7 +1,7 @@
 /* General body styles */
 body {
   font-family: Arial, sans-serif; /* Set a default font */
-  background-image: url('cyber_bg.jpeg'); /* Path to your JPEG image */
+  background-image: url('cyber_bg.jpg'); /* Path to your JPEG image */
   background-size: cover; /* Make the image cover the whole background */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center; /* Center the image */
