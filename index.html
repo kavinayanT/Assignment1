@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web and Script Assignment 1</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centering text */
+        }
+        h1 {
+            color: #ff0000; /* Red color for heading */
+        }
+        .navbar {
+            background-color: #7d7d7d; /* Grey background for navbar */
+            padding: 10px 0;
+            margin: 0;
+            display: flex; /* Using flexbox for centering */
+            justify-content: center; /* Centering menu items */
+        }
+        .navbar a {
+            color: #fff; /* White text for menu items */
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            margin: 0 10px;
+            background-color: #7d7d7d; /* Grey box */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .navbar a:hover {
+            background-color: #ff0000; /* Red background on hover */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1 class="logo">WHO IS KAV?</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">My Projects</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Hey, I'm Kavinayan</h2>
-      <p>Welcome to my first self built website. Look around to learn about who I am.</p>
-    </div>
-  </section>
+<!-- Navigation Menu -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about_me.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</div>
 
-  <footer>
-    <p>&copy; 2024 Kavinayan Thayananthakumar. All rights reserved.</p>
-  </footer>
+<div class="container">
+    <h1>Welcome to My Home Page!</h1>
+    <p>This is the home page where you can find links to various sections of my site.</p>
+    <p>Feel free to explore and learn more about me and my work!</p>
+</div>
+
 </body>
 </html>
