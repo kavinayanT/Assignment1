@@ -7,16 +7,23 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-image: url('cyber_bg.jpg'); /* Path to your background image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background */
+      margin: 0;
+      padding: 0;
+      color: #fff; /* White text color */
     }
-    form {
+    .form-container {
       max-width: 400px;
       margin: auto;
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 10px;
-      background-color: #f9f9f9;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
     }
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
@@ -42,33 +49,59 @@
       color: white;
       cursor: pointer;
       border-radius: 5px;
+      margin-top: 10px;
     }
     button:hover {
       background-color: #218838;
+    }
+    .required:after {
+      content: " *";
+      color: red; /* Red color for asterisk */
     }
   </style>
 </head>
 <body>
 
-  <form id="contact-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name">
-    <span id="name-error" class="error-message">Name is required</span>
+  <div class="form-container">
+    <form id="contact-form">
+      <label for="title">Title:</label>
+      <select id="title">
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+      </select>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email">
-    <span id="email-error" class="error-message">Valid email is required</span>
+      <label for="first-name" class="required">First Name:</label>
+      <input type="text" id="first-name">
+      <span id="first-name-error" class="error-message">First name is required</span>
 
-    <label for="cell">Cell:</label>
-    <input type="text" id="cell">
-    <span id="cell-error" class="error-message">Cell is required</span>
+      <label for="last-name" class="required">Last Name:</label>
+      <input type="text" id="last-name">
+      <span id="last-name-error" class="error-message">Last name is required</span>
 
-    <label for="comments">Comments:</label>
-    <textarea id="comments"></textarea>
-    <span id="comments-error" class="error-message">Comments are required</span>
+      <label for="phone" class="required">Phone Number:</label>
+      <input type="text" id="phone">
+      <span id="phone-error" class="error-message">Phone number is required</span>
 
-    <button type="submit">Submit</button>
-  </form>
+      <label for="region">Region:</label>
+      <select id="region">
+        <option value="North America">North America</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email" class="required">Email:</label>
+      <input type="text" id="email">
+      <span id="email-error" class="error-message">Valid email is required</span>
+
+      <label for="comments" class="required">Notes:</label>
+      <textarea id="comments"></textarea>
+      <span id="comments-error" class="error-message">Notes are required</span>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
   <script src="form.js"></script>
 </body>
