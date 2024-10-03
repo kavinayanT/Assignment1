@@ -1,0 +1,213 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  header {
+    background-color: blue;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: red;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: red;
+  }
+  
+  footer {
+    background-color: blue;
+    text-align: center;
+    padding: 15px;
+    color: white;
+  }
+  
+  /* Hero Section (Home) */
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: red;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .about img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .about-video {
+    margin-top: 20px;
+    max-width: 80%;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card h3 {
+    color: red;
+  }
+  
+  .project-card p {
+    margin-bottom: 20px;
+  }
+  
+  .project-link {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: red;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #555;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    background-color: #777;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: red;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 36px;
+    }
+  
+    .nav-container {
+      flex-direction: column;
+    }
+  
+    .project-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
