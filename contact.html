@@ -3,38 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .error {
+      border-color: red;
+      background-color: #ffe6e6;
+    }
+    .valid {
+      border-color: green;
+    }
+    .error-message {
+      color: red;
+      font-size: 12px;
+      display: none;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1 class="logo">My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <input type="tel" id="cell" name="cell" placeholder="Your Cell Number" required>
-      <textarea id="comments" name="comments" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+  <form id="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <span id="name-error" class="error-message">Name is required</span>
 
-  <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
-  </footer>
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+    <span id="email-error" class="error-message">Valid email is required</span>
+
+    <label for="cell">Cell:</label>
+    <input type="text" id="cell">
+    <span id="cell-error" class="error-message">Cell is required</span>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments"></textarea>
+    <span id="comments-error" class="error-message">Comments are required</span>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="form.js"></script>
 </body>
 </html>
