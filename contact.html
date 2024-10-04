@@ -13,76 +13,25 @@
             color: #000; /* Black text */
             margin: 0;
             padding: 0;
-            display: flex; /* Using flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            display: flex;
+            flex-direction: column; /* Allows stacking of navbar and form */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
             height: 100vh; /* Full viewport height */
             text-align: center; /* Centering text */
         }
-        form {
-            max-width: 400px;
-            width: 100%; /* Ensure form is responsive */
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .error {
-            border-color: red;
-            background-color: #ffe6e6;
-        }
-        .valid {
-            border-color: green;
-        }
-        .error-message {
-            color: red;
-            font-size: 12px;
-            display: none;
-        }
-        button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .required:after {
-            content: " *"; /* Adds a red asterisk for required fields */
-            color: red; /* Red color for the asterisk */
-        }
-        .note {
-            font-size: 12px; /* Note font size */
-            color: #000; /* Black text for note */
-            margin-top: -10px; /* Slightly decrease space before the note */
-            margin-bottom: 10px; /* Space after the note */
-        }
-        .phone-container {
-            display: flex; /* Flexbox for phone code and number */
-            align-items: center; /* Center align items vertically */
-            gap: 10px; /* Space between elements */
-        }
-        #phone-region {
-            width: 80px; /* Smaller width for phone region dropdown */
-        }
+
         .navbar {
             background-color: #8f1313; /* Maroon background for navbar */
             padding: 5px; /* Adjusted padding to make it smaller */
-            margin: 0;
+            width: 100%; /* Ensure the navbar spans the width of the page */
             display: flex; /* Using flexbox for centering */
             justify-content: center; /* Centering menu items */
             border-radius: 5px; /* Optional: rounded corners for navbar */
+            position: absolute; /* Make the navbar fixed at the top */
+            top: 0; /* Align to the top */
         }
+
         .navbar a {
             color: #fff; /* White text for menu items */
             text-decoration: none;
@@ -94,8 +43,77 @@
             font-weight: bold; /* Bold text */
             text-decoration: underline; /* Underlined text */
         }
+
         .navbar a:hover {
             background-color: #ff0404; /* Red background on hover */
+        }
+
+        form {
+            max-width: 400px;
+            width: 100%; /* Ensure form is responsive */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
+            margin-top: 100px; /* Ensure form is below the navbar */
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error {
+            border-color: red;
+            background-color: #ffe6e6;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .required:after {
+            content: " *"; /* Adds a red asterisk for required fields */
+            color: red; /* Red color for the asterisk */
+        }
+
+        .note {
+            font-size: 12px; /* Note font size */
+            color: #000; /* Black text for note */
+            margin-top: -10px; /* Slightly decrease space before the note */
+            margin-bottom: 10px; /* Space after the note */
+        }
+
+        .phone-container {
+            display: flex; /* Flexbox for phone code and number */
+            align-items: center; /* Center align items vertically */
+            gap: 10px; /* Space between elements */
+        }
+
+        #phone-region {
+            width: 80px; /* Smaller width for phone region dropdown */
         }
     </style>
 </head>
@@ -109,6 +127,7 @@
     <a href="contact.html">Contact</a>
 </div>
 
+<!-- Contact Form -->
 <form id="contact-form">
     <div class="note">Fields marked with an asterisk are required.</div>
 
