@@ -56,10 +56,13 @@
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
             margin-top: 100px; /* Ensure form is below the navbar */
+            display: flex;
+            flex-direction: column; /* Stack form elements */
+            align-items: center; /* Center form elements horizontally */
         }
 
         input, textarea, select {
-            width: 100%;
+            width: 100%; /* Full width of form elements */
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -110,6 +113,7 @@
             display: flex; /* Flexbox for phone code and number */
             align-items: center; /* Center align items vertically */
             gap: 10px; /* Space between elements */
+            width: 100%;
         }
 
         #phone-region {
