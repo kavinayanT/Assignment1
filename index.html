@@ -17,14 +17,13 @@
         }
         h1 {
             color: #0050fc; /* Blue color for heading */
-            /* Removed hover effect from heading */
         }
         .navbar {
             background-color: #06046f; /* Maroon background for navbar */
             padding: 5px; /* Adjusted padding to make it smaller */
             margin: 0;
-            display: flex; /* Using flexbox for centering */
-            justify-content: center; /* Centering menu items */
+            display: flex; /* Using flexbox for layout */
+            justify-content: space-between; /* Space between items */
             border-radius: 5px; /* Optional: rounded corners for navbar */
         }
         .navbar a {
@@ -32,14 +31,16 @@
             text-decoration: none;
             padding: 10px 15px; /* Adjusted padding for links */
             border-radius: 5px;
-            margin: 0 10px;
+            margin: 0 5px; /* Gap between menu items */
             background-color: transparent; /* Make navbar links transparent */
             transition: background-color 0.3s; /* Smooth transition */
             font-weight: bold; /* Bold text */
             text-decoration: underline; /* Underlined text */
+            flex: 1; /* Make each item take up equal space */
+            text-align: center; /* Center text within each section */
         }
         .navbar a:hover {
-            background-color: #5b34fa; /* Red background on hover */
+            background-color: #5b34fa; /* Change background color on hover */
         }
         .container {
             max-width: 800px;
