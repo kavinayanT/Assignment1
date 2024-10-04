@@ -15,40 +15,44 @@
             padding: 0;
             text-align: center; /* Centering text */
         }
+
         h1 {
             color: #4a83fc; /* Blue color for heading */
         }
+
         .navbar {
-            background-color: #0d0c49; /* Maroon background for navbar */
-            padding: 5px; /* Adjusted padding to make it smaller */
+            background-color: #0d0c49; /* Navbar background */
+            padding: 5px;
+            display: flex;
+            justify-content: center; /* Center the items with flexbox */
+            gap: 20px; /* Add gaps between the items */
             margin: 0;
-            display: flex; /* Using flexbox for layout */
-            justify-content: space-between; /* Space between items */
-            border-radius: 5px; /* Optional: rounded corners for navbar */
+            border-radius: 5px; /* Rounded corners for the navbar */
         }
+
         .navbar a {
             color: #fff; /* White text for menu items */
             text-decoration: none;
             padding: 10px 15px; /* Adjusted padding for links */
             border-radius: 5px;
-            margin: 0 5px; /* Gap between menu items */
-            background-color: transparent; /* Make navbar links transparent */
-            transition: background-color 0.3s; /* Smooth transition */
+            margin: 0; /* Removed margin */
+            background-color: transparent; /* Transparent background */
+            transition: background-color 0.3s; /* Smooth hover transition */
             font-weight: bold; /* Bold text */
             text-decoration: underline; /* Underlined text */
-            flex: 1; /* Make each item take up equal space */
-            text-align: center; /* Center text within each section */
+            width: 150px; /* Set a fixed width for each link */
+            text-align: center; /* Center the text */
         }
+
         .navbar a:hover {
-            background-color: #1ba4ff; /* Change background color on hover */
+            background-color: #1ba4ff; /* Background color on hover */
         }
+
         .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            /* border: 2px solid #000; Remove the black outline for the container */
-            border-radius: 5px; /* Optional: rounded corners for the container */
-            /* Removed hover effect from container */
+            text-align: center; /* Center the container's text */
         }
     </style>
 </head>
