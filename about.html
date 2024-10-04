@@ -7,15 +7,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000; /* Black background for all pages */
+            background-image: url('images/cyber_bg.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
             color: #fff; /* White text */
             margin: 0;
             padding: 0;
             text-align: center; /* Centering text */
         }
+
         h1, h2 {
             color: #ff0000; /* Red color for headings */
         }
+
         .navbar {
             background-color: #0d0c49; /* Updated to match the prompt */
             padding: 10px 0;
@@ -23,6 +27,7 @@
             display: flex; /* Using flexbox for centering */
             justify-content: center; /* Centering menu items */
         }
+
         .navbar a {
             color: #fff; /* White text for menu items */
             text-decoration: none;
@@ -32,20 +37,24 @@
             background-color: #0d0c49; /* Updated to match the prompt */
             transition: background-color 0.3s; /* Smooth transition */
         }
+
         .navbar a:hover {
             background-color: #1ba4ff; /* Blue background on hover */
         }
+
         .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
         }
+
         .gallery {
             margin: 20px auto;
             display: flex;
             justify-content: center;
             gap: 20px;
         }
+
         .gallery-item {
             position: relative;
             overflow: hidden;
@@ -54,16 +63,19 @@
             transition: transform 0.3s ease;
             width: 300px; /* Adjust width as needed */
         }
+
         .gallery-item:hover {
             transform: scale(1.05);
         }
-        .gallery-item img {
-            width: 100%;
-            vertical-align: middle;
-        }
+
+        .gallery-item img,
         .gallery-item video {
             width: 100%;
-            vertical-align: middle;
+            border-radius: 10px; /* Rounded corners for images and videos */
+        }
+
+        video {
+            max-height: 300px; /* Limit video height */
         }
     </style>
 </head>
@@ -89,7 +101,7 @@
         </div>
         <!-- Video -->
         <div class="gallery-item">
-            <video controls>
+            <video controls poster="images/video_poster.jpg"> <!-- Add a poster image for the video -->
                 <source src="videos/my_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
