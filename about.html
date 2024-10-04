@@ -17,7 +17,7 @@
             color: #ff0000; /* Red color for headings */
         }
         .navbar {
-            background-color: #7d7d7d; /* Grey background for navbar */
+            background-color: #0d0c49; /* Updated to match the prompt */
             padding: 10px 0;
             margin: 0;
             display: flex; /* Using flexbox for centering */
@@ -27,18 +27,43 @@
             color: #fff; /* White text for menu items */
             text-decoration: none;
             padding: 15px 25px;
-            border-radius: 5px;
+            border-radius: 10px; /* Updated border radius for better visibility */
             margin: 0 10px;
-            background-color: #7d7d7d; /* Grey box */
+            background-color: #0d0c49; /* Updated to match the prompt */
             transition: background-color 0.3s; /* Smooth transition */
         }
         .navbar a:hover {
-            background-color: #ff0000; /* Red background on hover */
+            background-color: #1ba4ff; /* Blue background on hover */
         }
         .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
+        }
+        .gallery {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+            width: 300px; /* Adjust width as needed */
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .gallery-item video {
+            width: 100%;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -55,6 +80,22 @@
 <div class="container">
     <h1>About Me</h1>
     <p>Hi! I'm Kavinyan Thayananthakumar, a second-year Networking Information Technology student. I'm passionate about networking, programming, cybersecurity, and AI.</p>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <!-- Picture -->
+        <div class="gallery-item">
+            <img src="images/my_photo.jpg" alt="My Photo">
+        </div>
+        <!-- Video -->
+        <div class="gallery-item">
+            <video controls>
+                <source src="videos/my_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
 </div>
 
 </body>
