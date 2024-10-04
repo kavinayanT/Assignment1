@@ -31,8 +31,9 @@
         .navbar-item {
             background-color: #0d0c49; /* Background for individual navbar item */
             padding: 10px;
-            border-radius: 5px; /* Rounded corners */
+            border-radius: 10px; /* Rounded corners */
             width: 150px; /* Fixed width */
+            transition: background-color 0.3s; /* Smooth transition for background color */
         }
 
         .navbar-item a {
@@ -40,12 +41,10 @@
             text-decoration: none;
             display: block;
             font-weight: bold;
-            text-decoration: underline; /* Underlined text */
             text-align: center; /* Center text */
-            transition: background-color 0.3s; /* Smooth hover transition */
         }
 
-        .navbar-item a:hover {
+        .navbar-item:hover {
             background-color: #1ba4ff; /* Background color on hover */
         }
 
