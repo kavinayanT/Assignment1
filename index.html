@@ -20,31 +20,32 @@
             color: #4a83fc; /* Blue color for heading */
         }
 
-        .navbar {
-            background-color: #0d0c49; /* Navbar background */
-            padding: 5px;
+        /* Make each navbar section standalone */
+        .navbar-container {
             display: flex;
-            justify-content: center; /* Center the items with flexbox */
-            gap: 20px; /* Add gaps between the items */
-            margin: 0;
-            border-radius: 5px; /* Rounded corners for the navbar */
+            justify-content: center; /* Center the navigation items horizontally */
+            gap: 20px; /* Add spacing between the stand-alone nav items */
+            margin: 20px 0;
         }
 
-        .navbar a {
+        .navbar-item {
+            background-color: #0d0c49; /* Background for individual navbar item */
+            padding: 10px;
+            border-radius: 5px; /* Rounded corners */
+            width: 150px; /* Fixed width */
+        }
+
+        .navbar-item a {
             color: #fff; /* White text for menu items */
             text-decoration: none;
-            padding: 10px 15px; /* Adjusted padding for links */
-            border-radius: 5px;
-            margin: 0; /* Removed margin */
-            background-color: transparent; /* Transparent background */
-            transition: background-color 0.3s; /* Smooth hover transition */
-            font-weight: bold; /* Bold text */
+            display: block;
+            font-weight: bold;
             text-decoration: underline; /* Underlined text */
-            width: 150px; /* Set a fixed width for each link */
-            text-align: center; /* Center the text */
+            text-align: center; /* Center text */
+            transition: background-color 0.3s; /* Smooth hover transition */
         }
 
-        .navbar a:hover {
+        .navbar-item a:hover {
             background-color: #1ba4ff; /* Background color on hover */
         }
 
@@ -58,12 +59,20 @@
 </head>
 <body>
 
-<!-- Navigation Menu -->
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about_me.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+<!-- Stand-alone Navigation Bars -->
+<div class="navbar-container">
+    <div class="navbar-item">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="navbar-item">
+        <a href="about_me.html">About Me</a>
+    </div>
+    <div class="navbar-item">
+        <a href="projects.html">Projects</a>
+    </div>
+    <div class="navbar-item">
+        <a href="contact.html">Contact</a>
+    </div>
 </div>
 
 <div class="container">
